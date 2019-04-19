@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 19 08:58:06 2019
+Georgia State University
+CSC8820
+@author: Mart Panichvatana
 
-@author: mp1105
 """
 class Server:
     """
