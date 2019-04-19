@@ -38,6 +38,7 @@ class Server:
         self.server_topology = server_topology
 
     def print_all_list(self):
+        print ("") 
         print ("An instance of Server") 
         for a, b, c, d in self.server_topology :
             print ("Server=", a)
@@ -84,6 +85,7 @@ class Service_Chain:
         self.service_chain_topology = service_chain_topology
 
     def print_all_list(self):
+        print ("") 
         print ("An instance of Service Chain") 
         for a, b, c, d in self.service_chain_topology :
             print ("Service Chain ID=", a)
@@ -159,6 +161,7 @@ class Partition_Chain:
         self.partition_chain_topology = partition_chain_topology
 
     def print_all_list(self):
+        print ("") 
         print ("An instance of Partition Chain") 
         for a, b, c, d ,e , f in self.partition_chain_topology :
             print ("Service Chain ID=", a, \
@@ -285,7 +288,7 @@ class cost_of_virtual_switching():
     """
 
     def __str__(self):
-        return  random.uniform(0, 1)
+        return  str(random.uniform(0, 1))
     
     
 
@@ -304,6 +307,25 @@ class optimal_cost_placement():
     Based on the IEEE INFOCOM 2018 -Apr 2018 Page 3-5
     Optimizing NFV Chian Deployment Through Minimizing the Cost of Virtual Switching
 
+
+    service_chain_placement
+        (Data Structure list of tuples)
+    =========== ===============================================================
+    Attribute   Description
+    =========== ===============================================================
+    chain_id    Service Chain ID
+    bell_id     Bell Number 
+    partition_id    Partition ID  
+    vnf_id      VNF ID
+    vnf_cpu     VNF required CPU number
+    vnf_flow_id VNF Flow order ID
+    server_id   Server ID
+    cpu_total   Total number of cpu
+    cpu_used    Number of used cpu
+    cpu_avail   Number of available cpu    
+    =========== ===============================================================
+    
+    
     Example of the resulf of OCP.
     service_chain_placement = [
              ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's1', 'c20', 'u6','a14',),
@@ -331,7 +353,17 @@ class optimal_cost_placement():
             ]
 
     """
-    service_chain_placement = []
+#    service_chain_placement = []
+    
+    service_chain_placement = [
+         ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's1', 'c20', 'u6','a14',),
+         ('c1', 'b1', 'p2', 'v2', 'u2', 'o2', 's2', 'c20', 'u4','a16',),           
+  
+         ('c2', 'b4', 'p1', 'v1', 'u5', 'o1', 's1', 'c20', 'u11','a9',),
+         ('c2', 'b4', 'p2', 'v3', 'u4', 'o2', 's2', 'c20', 'u8','a12',),
+         ('c2', 'b4', 'p1', 'v4', 'u2', 'o3', 's1', 'c20', 'u13','a7',),   
+         
+         ]
     myServer = []
     myService_Chain = []     
     myPartition_Chain = []
@@ -360,9 +392,9 @@ class optimal_cost_placement():
 #        print (self.myService_Chain)
 #        print (self.myPartition_Chain)
         
-    def __str__(self):        
-        for chain in self.myPartition_Chain:
-                print (chain[0])
+#    def __str__(self):        
+#        for chain in self.myPartition_Chain:
+#                print (chain[0])
                 
 #    def __iter__(self):
 #        return self
@@ -384,7 +416,22 @@ class optimal_cost_placement():
 #            print ("==Server==", key )
 
 
-        
+    def print_all_list(self):
+        print ("") 
+        print ("An instance of Result placement :") 
+        for a, b, c, d ,e , f, g, h, i, j in self.service_chain_placement :
+            print ("Service Chain ID=", a, \
+                   " Bell ID=", b, \
+                   " Partition ID=", c, \
+                   " VNF ID=", d, \
+                   " VNF CPU=", e, \
+                   " VNF Flow=", f, \
+                   " Server=", g,  \
+                   " cpu_total=", h, \
+                   " cpu_used=", i, \
+                   " cpu_avail=", j)
+
+            
     def __str__(self):
         return "The result of partition_chain on each server : Location_id=%s\n service_chain_placement=%s\n" % \
                 (self.service_chain_placement_location_id, self.service_chain_placement)        
@@ -419,3 +466,11 @@ if __name__ == '__main__':
     service_chain_placement = optimal_cost_placement(location1, myServer, myService_Chain, myPartition_Chain)
 #    print (service_chain_placement)
 #    service_chain_placement.perform_placement()
+    
+        
+    """    
+    Print the result of placement
+    """
+#    print (service_chain_placement)
+    service_chain_placement.print_all_list()    
+    
