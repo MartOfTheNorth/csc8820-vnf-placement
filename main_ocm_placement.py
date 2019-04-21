@@ -699,7 +699,7 @@ class optimal_cost_placement():
                    " cpu_avail=", j)          
 #        print ('service_chain_result ==== ', service_chain_result)       
         print ("") 
-        print ("The result of Server acclocation.") 
+        print ("The result of Server allocation.") 
         for a, b, c, d in service_chain_server_result :
             print ("Server       =", a)
             print ("cpu_total    =", b)            
