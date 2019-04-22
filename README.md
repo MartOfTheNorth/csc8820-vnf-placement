@@ -41,10 +41,12 @@ Server= s1
 cpu_total= c20
 cpu_used= u3
 cpu_avail= a17
+VNF length= l1
 Server= s2
 cpu_total= c20
 cpu_used= u2
 cpu_avail= a18
+VNF length= l1
 
 An instance of Service Chain
 Service Chain ID= c1
@@ -89,25 +91,31 @@ Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v1  VNF CPU= u5  VN
 Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v3  VNF CPU= u4  VNF Flow= o2
 Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v4  VNF CPU= u2  VNF Flow= o3
 
+
 Print the placement result on screen
 
 The result of Service Chain on Servers.
-Service Chain ID= c1  Bell ID= b1  Partition ID= p1  VNF ID= v1  VNF CPU= u3  VNF Flow= o1  Server= s2  cpu_total= c20  cpu_used= u5  cpu_avail= a15
-Service Chain ID= c1  Bell ID= b1  Partition ID= p2  VNF ID= v2  VNF CPU= u2  VNF Flow= o2  Server= s2  cpu_total= c20  cpu_used= u7  cpu_avail= a13
-Service Chain ID= c2  Bell ID= b1  Partition ID= p1  VNF ID= v1  VNF CPU= u5  VNF Flow= o1  Server= s1  cpu_total= c20  cpu_used= u8  cpu_avail= a12
-Service Chain ID= c2  Bell ID= b1  Partition ID= p2  VNF ID= v3  VNF CPU= u4  VNF Flow= o2  Server= s1  cpu_total= c20  cpu_used= u12  cpu_avail= a8
-Service Chain ID= c2  Bell ID= b1  Partition ID= p3  VNF ID= v4  VNF CPU= u2  VNF Flow= o3  Server= s2  cpu_total= c20  cpu_used= u9  cpu_avail= a11
+Service Chain ID= c1  Bell ID= b2  Partition ID= p1  VNF ID= v1  VNF CPU= u3  VNF Flow= o1  Server= s1  cpu_total= c20  cpu_used= u12.544038277174801  cpu_avail= a7.455961722825199  VNF Length on Server= l1  VNF Length on Partition= l1  Total Required CPU= t5.0  Switching Cost cv4.544038277174801
+Service Chain ID= c1  Bell ID= b2  Partition ID= p1  VNF ID= v2  VNF CPU= u2  VNF Flow= o2  Server= s1  cpu_total= c20  cpu_used= u12.544038277174801  cpu_avail= a7.455961722825199  VNF Length on Server= l1  VNF Length on Partition= l1  Total Required CPU= t5.0  Switching Cost cv4.544038277174801
+Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v1  VNF CPU= u5  VNF Flow= o1  Server= s1  cpu_total= c20  cpu_used= u28.088076554349602  cpu_avail= a-8.088076554349602  VNF Length on Server= l1  VNF Length on Partition= l1  Total Required CPU= t11.0  Switching Cost cv4.544038277174801
+Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v3  VNF CPU= u4  VNF Flow= o2  Server= s1  cpu_total= c20  cpu_used= u28.088076554349602  cpu_avail= a-8.088076554349602  VNF Length on Server= l1  VNF Length on Partition= l1  Total Required CPU= t11.0  Switching Cost cv4.544038277174801
+Service Chain ID= c2  Bell ID= b5  Partition ID= p1  VNF ID= v4  VNF CPU= u2  VNF Flow= o3  Server= s1  cpu_total= c20  cpu_used= u28.088076554349602  cpu_avail= a-8.088076554349602  VNF Length on Server= l1  VNF Length on Partition= l1  Total Required CPU= t11.0  Switching Cost cv4.544038277174801
 
-The result of Server acclocation.
+The result of Server allocation.
 Server       = s1
 cpu_total    = c20
-cpu_used     = u12
-cpu_available= a8
+cpu_used     = u28.088076554349602
+cpu_available= a-8.088076554349602
+VNF Length   = l1
 Server       = s2
 cpu_total    = c20
-cpu_used     = u9
-cpu_available= a11
+cpu_used     = u2
+cpu_available= a18
+VNF Length   = l1
 
 Summary View.
-[[[[('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's2', 'c20', 'u5', 'a15')], [('c1', 'b1', 'p2', 'v2', 'u2', 'o2', 's2', 'c20', 'u7', 'a13')]]], [[[('c2', 'b1', 'p1', 'v1', 'u5', 'o1', 's1', 'c20', 'u8', 'a12')], [('c2', 'b1', 'p2', 'v3', 'u4', 'o2', 's1', 'c20', 'u12', 'a8')], [('c2', 'b1', 'p3', 'v4', 'u2', 'o3', 's2', 'c20', 'u9', 'a11')]]]]
-[]
+[[[[('c1', 'b2', 'p1', 'v1', 'u3', 'o1', 's1', 'c20', 'u12.544038277174801', 'a7.455961722825199', 'l1', 'l1', 't5.0', 'cv4.544038277174801'), 
+('c1', 'b2', 'p1', 'v2', 'u2', 'o2', 's1', 'c20', 'u12.544038277174801', 'a7.455961722825199', 'l1', 'l1', 't5.0', 'cv4.544038277174801')]]], [[[
+('c2', 'b5', 'p1', 'v1', 'u5', 'o1', 's1', 'c20', 'u28.088076554349602', 'a-8.088076554349602', 'l1', 'l1', 't11.0', 'cv4.544038277174801'), 
+('c2', 'b5', 'p1', 'v3', 'u4', 'o2', 's1', 'c20', 'u28.088076554349602', 'a-8.088076554349602', 'l1', 'l1', 't11.0', 'cv4.544038277174801'), 
+('c2', 'b5', 'p1', 'v4', 'u2', 'o3', 's1', 'c20', 'u28.088076554349602', 'a-8.088076554349602', 'l1', 'l1', 't11.0', 'cv4.544038277174801')]]]]
