@@ -11,6 +11,21 @@ CSC8820
 import random
 import math
 
+def ext1(input):
+    return (input[1:])
+
+def m1(input):
+    return float(input[1:])
+
+def m2(input):
+    return float(input[2:])
+
+def madd(input, add):
+    return (input[0]+str(float(input[1:])+float(add)))
+    
+def mdel(input, delete):
+    return (input[0]+str(float(input[1:])-float(delete)))    
+        
 class subchain:
     
     # Subchain class 
@@ -150,11 +165,11 @@ class Server:
         print ("") 
         print ("An instance of Server") 
         for a, b, c, d, e in self.server_topology :
-            print ("Server=", a)
-            print ("cpu_total=", b)            
-            print ("cpu_used=", c)       
-            print ("cpu_avail=", d)       
-            print ("VNF length=", e)                             
+            print ("Server=", ext1(a))
+            print ("cpu_total=", ext1(b))            
+            print ("cpu_used=", ext1(c))       
+            print ("cpu_avail=", ext1(d))       
+            print ("VNF length=", ext1(e))                             
     
     def __str__(self):
         return "An instance of Server : server_location_id=%s\n server_topology=%s\n" % \
@@ -192,10 +207,10 @@ class Service_Chain:
         print ("") 
         print ("An instance of Service Chain") 
         for a, b, c, d in self.service_chain_topology :
-            print ("Service Chain ID=", a)
-            print ("VNF ID          =", b)            
-            print ("VNF required CPU=", c)       
-            print ("VNF Flow order  =", d)       
+            print ("Service Chain ID=", ext1(a))
+            print ("VNF ID          =", ext1(b))            
+            print ("VNF required CPU=", ext1(c))       
+            print ("VNF Flow order  =", ext1(d))       
             
     def __str__(self):
         return "An instance of Service_Chain : service_chain_location_id=%s\n service_chain_topology=%s\n" % \
@@ -250,12 +265,12 @@ class Partition_Chain:
         print ("") 
         print ("An instance of Partition Chain") 
         for a, b, c, d ,e , f in self.partition_chain_topology :
-            print ("Service Chain ID=", a, \
-                   " Bell ID=", b, \
-                   " Partition ID=", c, \
-                   " VNF ID=", d, \
-                   " VNF CPU=", e, \
-                   " VNF Flow=", f)
+            print ("Service Chain ID=", ext1(a), \
+                   " Bell ID        =", ext1(b), \
+                   " Partition ID   =", ext1(c), \
+                   " VNF ID         =", ext1(d), \
+                   " VNF CPU        =", ext1(e), \
+                   " VNF Flow       =", ext1(f))
  
     
     def __str__(self):
@@ -275,12 +290,14 @@ def load_topology(location):
     cpu_total   Total number of cpu
     cpu_used    Number of used cpu
     cpu_avail   Number of available cpu
+    VNF_length  Number of VNF on server
     =========== ===============================================================
     """
     server_topology = [
-             ('s1', 'c20', 'u3','a17', 'l1'),
-             ('s2', 'c20', 'u2','a18', 'l1'),
+             ('s1', 'c30', 'u3','a27', 'l1'),
+             ('s2', 'c30', 'u2','a28', 'l1'),
             ]
+    
     myServer = Server(location, server_topology)
 #    server_topology = [
 #             ('s1', 'c20', 'u3','a17', ),
@@ -416,6 +433,7 @@ class cost_of_virtual_switching():
         
 
         return (c.get_cost())
+#        return (random.uniform(0, 1))
         """
 #        For Testing with random number    
 #        return (random.uniform(0, 1))
@@ -470,19 +488,31 @@ class optimal_cost_placement():
     
     Example of the resulf of OCP.
     service_chain_placement = [
-             ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's1', 'c20', 'u6','a14','l4',),
-             ('c1', 'b1', 'p2', 'v2', 'u2', 'o2', 's2', 'c20', 'u4','a16','l4',),           
+             ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's1', 'c20', 'u6','a14','l4','l5','t5','cv4.0',),
+             ('c1', 'b1', 'p1', 'v2', 'u2', 'o2', 's2', 'c20', 'u4','a16','l4','l5','t5','cv4.0',),           
   
-             ('c2', 'b4', 'p1', 'v1', 'u5', 'o1', 's1', 'c20', 'u11','a9','l7',),
-             ('c2', 'b4', 'p2', 'v3', 'u4', 'o2', 's2', 'c20', 'u8','a12','l7',),
-             ('c2', 'b4', 'p1', 'v4', 'u2', 'o3', 's1', 'c20', 'u13','a7','l7',),   
+             ('c2', 'b4', 'p2', 'v1', 'u5', 'o1', 's1', 'c20', 'u11','a9','l7','l3','t6','cv5.0'),
+             ('c2', 'b4', 'p2', 'v3', 'u4', 'o2', 's2', 'c20', 'u8','a12','l7','l3','t6','cv5.0'),
+             ('c2', 'b4', 'p2', 'v4', 'u2', 'o3', 's1', 'c20', 'u13','a7','l7','l3','t6','cv5.0'),  
              
              ]
     
-    This is the updated server_topology.
+    server_placement
+        (Data Structure list of tuples)    
+    =========== ===============================================================
+    Attribute   Description
+    =========== ===============================================================
+    server_id   Server ID
+    cpu_total   Total number of cpu
+    cpu_used    Number of used cpu
+    cpu_avail   Number of available cpu
+    VNF_length  Number of VNF on server
+    =========== ===============================================================
+    
+    This is the resulted server_topology.
     server_topology = [
-             ('s1', 'c20', 'u11','a9','l7',),
-             ('s2', 'c20', 'u8','a12','l7',),
+             ('s1', 'c30', 'u11','a9','l7',),
+             ('s2', 'c30', 'u8','a12','l7',),
             ]
 
     This service_chain_topology remains no change.
@@ -603,6 +633,7 @@ class optimal_cost_placement():
             print(used)
             lst[9] = mdel(lst[9],(used)) #Availalbe CPU
             lst[8] = madd(lst[8],(used)) #Used CPU
+            lst[10] = madd(lst[10],m1(lst[12])) #Used CPU            
             vnf_list = (tuple(lst))
             # Update Server List
             new_server_list = []
@@ -616,6 +647,7 @@ class optimal_cost_placement():
                         s_lst = list(s)
                         s_lst[3] = mdel(s_lst[3],(used))  #Availalbe CPU
                         s_lst[2] = madd(s_lst[2],(used))  #Used CPU
+                        s_lst[4] = madd(s_lst[4],m1(lst[12])) #Used CPU                                  
                         s = (tuple(s_lst))
 #                    else :    
 #                       print ('no')
@@ -635,7 +667,7 @@ class optimal_cost_placement():
             
             For Example:
             Input :
-                VNF list= ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's2', 'c20', 'u2', 'a18')
+                VNF list= ('c1', 'b1', 'p1', 'v1', 'u3', 'o1', 's2', 'c20', 'u2', 'a18','l1')
                 Server list = [
                                  ('s1', 'c20', 'u3','a17', 'l1'),
                                  ('s2', 'c20', 'u2','a18', 'l1'),
@@ -665,6 +697,10 @@ class optimal_cost_placement():
 #            print(new_server_list)
             new_server_list= sorted(set(new_server_list))
             return (vnf_list, new_server_list)
+
+
+        def custom_sort(t):
+            return t[1]  # Sort by Available CPU
         """        
         # End of def
         """
@@ -743,7 +779,7 @@ class optimal_cost_placement():
     
                     """
                     # Start from 1st Partition           
-                    """
+                    """               
                     myPartitionServer = myBellServer
                     myPartitionRun = myPartionList[0]
                     min_cv_at_partition = 1000
@@ -770,7 +806,7 @@ class optimal_cost_placement():
                                     myVNFListAll.append(vnf)
                                     myVNFLengthinPartition = myVNFLength + 1
                                     myVNFListTotalCPUinPartition = myVNFListTotalCPUinPartition + float(ext1(vnf[4]))
-                            myVNFList= sorted(set(myVNFList))
+                            myVNFList= sorted(set(myVNFList))                            
                             myVNFListAll= sorted(set(myVNFListAll))
 #                            print ('myVNFList=', myVNFList)
 #                            print ('myVNFListAll=', myVNFListAll)
@@ -778,6 +814,8 @@ class optimal_cost_placement():
                             """
                             # Start from 1st VNF
                             """
+
+                            myPartitionServer.sort(key=custom_sort)                        
                             myVNFServer = myPartitionServer
                             myVNFRun = myVNFList[0]
                             
@@ -816,16 +854,24 @@ class optimal_cost_placement():
                                             """
                                             print('if (b_first_vnf == True)')
                                             if (b_first_vnf == True) :   
-                                                print('(b_first_vnf == True)')                                                
+                                                print('(b_first_vnf == True)')      
+                                                
+
                                                 for s in  myVNFServer  : 
                                                         cv_at_server = \
                                                 cost_of_virtual_switching.cost_of_virtual_switching_calculator( \
                                                 self, myChainRun, myBellRun, myPartitionRun, myVNFRun, \
                                                 cpu[4], cpu[5], s[0], s[1], s[2], s[3], s[4], myVNFLengthinPartition,\
                                                 myVNFListTotalCPUinPartition )
+                                                        print('cv_at_server=',cv_at_server)
                                         
-                                                        if (cv_at_server < min_cv_at_server ):
-                                                            min_cv_at_server = cv_at_server                                                         
+                                                        if ((cv_at_server+myVNFListTotalCPUinPartition) < min_cv_at_server ):
+#                                                        if ((cv_at_server) < min_cv_at_server ):
+                                                            print('==============cv_at_server < min_cv_at_server')
+                                                            print('min_cv_at_server=',min_cv_at_server)
+                                                            print('(cv_at_server+myVNFListTotalCPUinPartition)=',(cv_at_server+myVNFListTotalCPUinPartition) )
+                                                            min_cv_at_server = (cv_at_server+myVNFListTotalCPUinPartition)                                                         
+#                                                            min_cv_at_server = (cv_at_server)                                                         
                                                             service_chain_placement_vnf_server = (myChainRun, myBellRun, \
                                                                     myPartitionRun, myVNFRun, cpu[4], cpu[5], s[0], s[1], \
                                                                     s[2], s[3], s[4], ('l'+str(myVNFLengthinPartition)), ('t'+str(myVNFListTotalCPUinPartition)), \
@@ -932,32 +978,62 @@ class optimal_cost_placement():
         print ("") 
         print ("The result of Service Chain on Servers.")         
         for a, b, c, d ,e , f, g, h, i, j, k, l, m, n in service_chain_result :
-            print ("Service Chain ID=", a, \
-                   " Bell ID=", b, \
-                   " Partition ID=", c, \
-                   " VNF ID=", d, \
-                   " VNF CPU=", e, \
-                   " VNF Flow=", f, \
-                   " Server=", g,  \
-                   " cpu_total=", h, \
-                   " cpu_used=", i, \
-                   " cpu_avail=", j, \
-                   " VNF Length on Server=", k, \
-                   " VNF Length on Partition=", l, \
-                   " Total Required CPU=", m, \
-                   " Switching Cost", n)
+            print ("Service Chain ID=", ext1(a), \
+                   " Bell ID=", ext1(b), \
+                   " Partition ID=", ext1(c), \
+                   " VNF ID=", ext1(d), \
+                   " VNF CPU=", ext1(e), \
+                   " VNF Flow=", ext1(f), \
+                   " Server=", ext1(g),  \
+                   " cpu_total=", ext1(h), \
+                   " cpu_used=", ext1(i), \
+                   " cpu_avail=", ext1(j), \
+                   " VNF Length on Server=", ext1(k), \
+                   " VNF Length on Partition=", ext1(l), \
+                   " Total Required CPU=", ext1(m), \
+                   " Switching Cost", m2(n))
 
             
 #        print ('service_chain_result ==== ', service_chain_result)       
         print ("") 
         print ("The result of Server allocation.") 
         for a, b, c, d , e in service_chain_server_result :
-            print ("Server       =", a)
-            print ("cpu_total    =", b)            
-            print ("cpu_used     =", c)       
-            print ("cpu_available=", d)  
-            print ("VNF Length   =", e)  
+            print ("Server       =", ext1(a))
+            print ("cpu_total    =", ext1(b))            
+            print ("cpu_used     =", ext1(c))       
+            print ("cpu_available=", ext1(d))  
+            print ("VNF Length   =", ext1(e))  
 
+#        print ("") 
+#        print ("Print the placement result on screen") 
+#        print ("") 
+#        print ("The result of Service Chain on Servers.")         
+#        for a, b, c, d ,e , f, g, h, i, j, k, l, m, n in service_chain_result :
+#            print ("Service Chain ID=", a, \
+#                   " Bell ID=", b, \
+#                   " Partition ID=", c, \
+#                   " VNF ID=", d, \
+#                   " VNF CPU=", e, \
+#                   " VNF Flow=", f, \
+#                   " Server=", g,  \
+#                   " cpu_total=", h, \
+#                   " cpu_used=", i, \
+#                   " cpu_avail=", j, \
+#                   " VNF Length on Server=", k, \
+#                   " VNF Length on Partition=", l, \
+#                   " Total Required CPU=", m, \
+#                   " Switching Cost", n)
+#
+#            
+##        print ('service_chain_result ==== ', service_chain_result)       
+#        print ("") 
+#        print ("The result of Server allocation.") 
+#        for a, b, c, d , e in service_chain_server_result :
+#            print ("Server       =", a)
+#            print ("cpu_total    =", b)            
+#            print ("cpu_used     =", c)       
+#            print ("cpu_available=", d)  
+#            print ("VNF Length   =", e)  
 # End of class optimal_cost_placement(object):
     
 if __name__ == '__main__':
