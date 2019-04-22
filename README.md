@@ -30,7 +30,7 @@ Goes over all partitions of service chain, grouping subsets of VNFs. For each p
 
 Run 
 
-$python3  main_ocm_placement.py
+$python3  main_vnf_placement.py
 
 
 
