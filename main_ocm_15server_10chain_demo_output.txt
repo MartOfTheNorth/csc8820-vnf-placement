@@ -1,0 +1,162 @@
+Print the placement result on screen
+
+The result of Service Chain on Servers.
+Service Chain ID= 1  Bell ID= 8  Partition ID= 1  VNF ID= 11  VNF CPU= 3  VNF Flow= 1  Server= 14  cpu_total= 18  cpu_used= 2.48  cpu_avail= 13.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 3.0  Switching Cost -0.52
+Service Chain ID= 1  Bell ID= 8  Partition ID= 2  VNF ID= 12  VNF CPU= 3  VNF Flow= 2  Server= 10  cpu_total= 20  cpu_used= 2.48  cpu_avail= 14.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 3.0  Switching Cost -0.52
+Service Chain ID= 1  Bell ID= 8  Partition ID= 3  VNF ID= 13  VNF CPU= 3  VNF Flow= 3  Server= 12  cpu_total= 20  cpu_used= 2.48  cpu_avail= 14.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 3.0  Switching Cost -0.52
+Service Chain ID= 1  Bell ID= 8  Partition ID= 4  VNF ID= 14  VNF CPU= 3  VNF Flow= 4  Server= 4  cpu_total= 21  cpu_used= 2.48  cpu_avail= 15.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 3.0  Switching Cost -0.52
+Service Chain ID= 10  Bell ID= 8  Partition ID= 1  VNF ID= 101  VNF CPU= 7  VNF Flow= 1  Server= 8  cpu_total= 21  cpu_used= 6.48  cpu_avail= 11.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 10  Bell ID= 8  Partition ID= 2  VNF ID= 102  VNF CPU= 7  VNF Flow= 2  Server= 7  cpu_total= 23  cpu_used= 6.48  cpu_avail= 13.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 10  Bell ID= 8  Partition ID= 3  VNF ID= 103  VNF CPU= 7  VNF Flow= 3  Server= 13  cpu_total= 25  cpu_used= 6.48  cpu_avail= 15.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 10  Bell ID= 8  Partition ID= 4  VNF ID= 104  VNF CPU= 7  VNF Flow= 4  Server= 6  cpu_total= 25  cpu_used= 6.48  cpu_avail= 15.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 2  Bell ID= 8  Partition ID= 1  VNF ID= 21  VNF CPU= 6  VNF Flow= 1  Server= 5  cpu_total= 26  cpu_used= 5.48  cpu_avail= 17.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.52
+Service Chain ID= 2  Bell ID= 8  Partition ID= 2  VNF ID= 22  VNF CPU= 6  VNF Flow= 2  Server= 11  cpu_total= 27  cpu_used= 5.48  cpu_avail= 18.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.52
+Service Chain ID= 2  Bell ID= 8  Partition ID= 3  VNF ID= 23  VNF CPU= 6  VNF Flow= 3  Server= 15  cpu_total= 29  cpu_used= 5.48  cpu_avail= 20.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.52
+Service Chain ID= 2  Bell ID= 8  Partition ID= 4  VNF ID= 24  VNF CPU= 6  VNF Flow= 4  Server= 2  cpu_total= 29  cpu_used= 5.48  cpu_avail= 20.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.52
+Service Chain ID= 3  Bell ID= 8  Partition ID= 1  VNF ID= 31  VNF CPU= 7  VNF Flow= 1  Server= 1  cpu_total= 30  cpu_used= 6.48  cpu_avail= 20.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 3  Bell ID= 8  Partition ID= 2  VNF ID= 32  VNF CPU= 7  VNF Flow= 2  Server= 3  cpu_total= 31  cpu_used= 6.48  cpu_avail= 21.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 3  Bell ID= 8  Partition ID= 3  VNF ID= 33  VNF CPU= 7  VNF Flow= 3  Server= 9  cpu_total= 31  cpu_used= 6.48  cpu_avail= 21.52  VNF Length on Server= 2.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.52
+Service Chain ID= 3  Bell ID= 8  Partition ID= 4  VNF ID= 34  VNF CPU= 7  VNF Flow= 4  Server= 14  cpu_total= 18  cpu_used= 9.18  cpu_avail= 6.819999999999999  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 7.0  Switching Cost -0.3
+Service Chain ID= 4  Bell ID= 8  Partition ID= 1  VNF ID= 41  VNF CPU= 6  VNF Flow= 1  Server= 10  cpu_total= 20  cpu_used= 8.18  cpu_avail= 8.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 4  Bell ID= 8  Partition ID= 2  VNF ID= 42  VNF CPU= 6  VNF Flow= 2  Server= 12  cpu_total= 20  cpu_used= 8.18  cpu_avail= 8.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 4  Bell ID= 8  Partition ID= 3  VNF ID= 43  VNF CPU= 6  VNF Flow= 3  Server= 4  cpu_total= 21  cpu_used= 8.18  cpu_avail= 9.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 4  Bell ID= 8  Partition ID= 4  VNF ID= 44  VNF CPU= 6  VNF Flow= 4  Server= 8  cpu_total= 21  cpu_used= 12.18  cpu_avail= 5.819999999999999  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 5  Bell ID= 8  Partition ID= 1  VNF ID= 51  VNF CPU= 5  VNF Flow= 1  Server= 7  cpu_total= 23  cpu_used= 11.18  cpu_avail= 8.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 5.0  Switching Cost -0.3
+Service Chain ID= 5  Bell ID= 8  Partition ID= 2  VNF ID= 52  VNF CPU= 5  VNF Flow= 2  Server= 13  cpu_total= 25  cpu_used= 11.18  cpu_avail= 10.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 5.0  Switching Cost -0.3
+Service Chain ID= 5  Bell ID= 8  Partition ID= 3  VNF ID= 53  VNF CPU= 5  VNF Flow= 3  Server= 6  cpu_total= 25  cpu_used= 11.18  cpu_avail= 10.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 5.0  Switching Cost -0.3
+Service Chain ID= 5  Bell ID= 8  Partition ID= 4  VNF ID= 54  VNF CPU= 5  VNF Flow= 4  Server= 5  cpu_total= 26  cpu_used= 10.18  cpu_avail= 12.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 5.0  Switching Cost -0.3
+Service Chain ID= 6  Bell ID= 8  Partition ID= 1  VNF ID= 61  VNF CPU= 6  VNF Flow= 1  Server= 11  cpu_total= 27  cpu_used= 11.18  cpu_avail= 12.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 6  Bell ID= 8  Partition ID= 2  VNF ID= 62  VNF CPU= 6  VNF Flow= 2  Server= 15  cpu_total= 29  cpu_used= 11.18  cpu_avail= 14.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 6  Bell ID= 8  Partition ID= 3  VNF ID= 63  VNF CPU= 6  VNF Flow= 3  Server= 2  cpu_total= 29  cpu_used= 11.18  cpu_avail= 14.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 6  Bell ID= 8  Partition ID= 4  VNF ID= 64  VNF CPU= 6  VNF Flow= 4  Server= 1  cpu_total= 30  cpu_used= 12.18  cpu_avail= 14.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.3
+Service Chain ID= 7  Bell ID= 8  Partition ID= 1  VNF ID= 71  VNF CPU= 4  VNF Flow= 1  Server= 3  cpu_total= 31  cpu_used= 10.18  cpu_avail= 17.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 4.0  Switching Cost -0.3
+Service Chain ID= 7  Bell ID= 8  Partition ID= 2  VNF ID= 72  VNF CPU= 4  VNF Flow= 2  Server= 9  cpu_total= 31  cpu_used= 10.18  cpu_avail= 17.82  VNF Length on Server= 3.0  VNF Length on Partition= 1  Total Required CPU= 4.0  Switching Cost -0.3
+Service Chain ID= 7  Bell ID= 8  Partition ID= 3  VNF ID= 73  VNF CPU= 4  VNF Flow= 3  Server= 14  cpu_total= 18  cpu_used= 13.02  cpu_avail= 2.9799999999999995  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 4.0  Switching Cost -0.16
+Service Chain ID= 7  Bell ID= 8  Partition ID= 4  VNF ID= 74  VNF CPU= 4  VNF Flow= 4  Server= 10  cpu_total= 20  cpu_used= 12.02  cpu_avail= 4.98  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 4.0  Switching Cost -0.16
+Service Chain ID= 8  Bell ID= 4  Partition ID= 1  VNF ID= 81  VNF CPU= 6  VNF Flow= 1  Server= 12  cpu_total= 20  cpu_used= 14.02  cpu_avail= 2.9800000000000004  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.16
+Service Chain ID= 8  Bell ID= 4  Partition ID= 2  VNF ID= 82  VNF CPU= 6  VNF Flow= 2  Server= 4  cpu_total= 21  cpu_used= 14.02  cpu_avail= 3.9800000000000004  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 6.0  Switching Cost -0.16
+Service Chain ID= 8  Bell ID= 4  Partition ID= 3  VNF ID= 83  VNF CPU= 6  VNF Flow= 3  Server=   cpu_total=   cpu_used=   cpu_avail=   VNF Length on Server=   VNF Length on Partition= 2  Total Required CPU= 12.0  Switching Cost 9999.0
+Service Chain ID= 8  Bell ID= 4  Partition ID= 3  VNF ID= 84  VNF CPU= 6  VNF Flow= 4  Server= 1  cpu_total= 30  cpu_used= 24.25  cpu_avail= 2.75  VNF Length on Server= 5.0  VNF Length on Partition= 2  Total Required CPU= 12.0  Switching Cost 0.07
+Service Chain ID= 9  Bell ID= 8  Partition ID= 1  VNF ID= 91  VNF CPU= 2  VNF Flow= 1  Server= 8  cpu_total= 21  cpu_used= 14.02  cpu_avail= 3.9799999999999995  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 2.0  Switching Cost -0.16
+Service Chain ID= 9  Bell ID= 8  Partition ID= 2  VNF ID= 92  VNF CPU= 2  VNF Flow= 2  Server= 7  cpu_total= 23  cpu_used= 13.02  cpu_avail= 6.98  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 2.0  Switching Cost -0.16
+Service Chain ID= 9  Bell ID= 8  Partition ID= 3  VNF ID= 93  VNF CPU= 2  VNF Flow= 3  Server= 13  cpu_total= 25  cpu_used= 13.02  cpu_avail= 8.98  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 2.0  Switching Cost -0.16
+Service Chain ID= 9  Bell ID= 8  Partition ID= 4  VNF ID= 94  VNF CPU= 2  VNF Flow= 4  Server= 6  cpu_total= 25  cpu_used= 13.02  cpu_avail= 8.98  VNF Length on Server= 4.0  VNF Length on Partition= 1  Total Required CPU= 2.0  Switching Cost -0.16
+
+The result of Server allocation.
+Server       = 1
+cpu_total    = 30
+cpu_used     = 24.25
+cpu_available= 2.75
+VNF Length   = 5.0
+Server       = 10
+cpu_total    = 20
+cpu_used     = 12.02
+cpu_available= 4.98
+VNF Length   = 4.0
+Server       = 11
+cpu_total    = 27
+cpu_used     = 11.18
+cpu_available= 12.82
+VNF Length   = 3.0
+Server       = 12
+cpu_total    = 20
+cpu_used     = 14.02
+cpu_available= 2.9800000000000004
+VNF Length   = 4.0
+Server       = 13
+cpu_total    = 25
+cpu_used     = 13.02
+cpu_available= 8.98
+VNF Length   = 4.0
+Server       = 14
+cpu_total    = 18
+cpu_used     = 13.02
+cpu_available= 2.9799999999999995
+VNF Length   = 4.0
+Server       = 15
+cpu_total    = 29
+cpu_used     = 11.18
+cpu_available= 14.82
+VNF Length   = 3.0
+Server       = 2
+cpu_total    = 29
+cpu_used     = 11.18
+cpu_available= 14.82
+VNF Length   = 3.0
+Server       = 3
+cpu_total    = 31
+cpu_used     = 10.18
+cpu_available= 17.82
+VNF Length   = 3.0
+Server       = 4
+cpu_total    = 21
+cpu_used     = 14.02
+cpu_available= 3.9800000000000004
+VNF Length   = 4.0
+Server       = 5
+cpu_total    = 26
+cpu_used     = 10.18
+cpu_available= 12.82
+VNF Length   = 3.0
+Server       = 6
+cpu_total    = 25
+cpu_used     = 13.02
+cpu_available= 8.98
+VNF Length   = 4.0
+Server       = 7
+cpu_total    = 23
+cpu_used     = 13.02
+cpu_available= 6.98
+VNF Length   = 4.0
+Server       = 8
+cpu_total    = 21
+cpu_used     = 14.02
+cpu_available= 3.9799999999999995
+VNF Length   = 4.0
+Server       = 9
+cpu_total    = 31
+cpu_used     = 10.18
+cpu_available= 17.82
+VNF Length   = 3.0
+
+Summary View.
+('c1', 'b8', 'p1', 'v11', 'u3', 'o1', 's14', 'c18', 'u2.48', 'a13.52', 'l2.0', 'l1', 't3.0', 'cv-0.52')
+('c1', 'b8', 'p2', 'v12', 'u3', 'o2', 's10', 'c20', 'u2.48', 'a14.52', 'l2.0', 'l1', 't3.0', 'cv-0.52')
+('c1', 'b8', 'p3', 'v13', 'u3', 'o3', 's12', 'c20', 'u2.48', 'a14.52', 'l2.0', 'l1', 't3.0', 'cv-0.52')
+('c1', 'b8', 'p4', 'v14', 'u3', 'o4', 's4', 'c21', 'u2.48', 'a15.52', 'l2.0', 'l1', 't3.0', 'cv-0.52')
+('c10', 'b8', 'p1', 'v101', 'u7', 'o1', 's8', 'c21', 'u6.48', 'a11.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c10', 'b8', 'p2', 'v102', 'u7', 'o2', 's7', 'c23', 'u6.48', 'a13.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c10', 'b8', 'p3', 'v103', 'u7', 'o3', 's13', 'c25', 'u6.48', 'a15.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c10', 'b8', 'p4', 'v104', 'u7', 'o4', 's6', 'c25', 'u6.48', 'a15.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c2', 'b8', 'p1', 'v21', 'u6', 'o1', 's5', 'c26', 'u5.48', 'a17.52', 'l2.0', 'l1', 't6.0', 'cv-0.52')
+('c2', 'b8', 'p2', 'v22', 'u6', 'o2', 's11', 'c27', 'u5.48', 'a18.52', 'l2.0', 'l1', 't6.0', 'cv-0.52')
+('c2', 'b8', 'p3', 'v23', 'u6', 'o3', 's15', 'c29', 'u5.48', 'a20.52', 'l2.0', 'l1', 't6.0', 'cv-0.52')
+('c2', 'b8', 'p4', 'v24', 'u6', 'o4', 's2', 'c29', 'u5.48', 'a20.52', 'l2.0', 'l1', 't6.0', 'cv-0.52')
+('c3', 'b8', 'p1', 'v31', 'u7', 'o1', 's1', 'c30', 'u6.48', 'a20.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c3', 'b8', 'p2', 'v32', 'u7', 'o2', 's3', 'c31', 'u6.48', 'a21.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c3', 'b8', 'p3', 'v33', 'u7', 'o3', 's9', 'c31', 'u6.48', 'a21.52', 'l2.0', 'l1', 't7.0', 'cv-0.52')
+('c3', 'b8', 'p4', 'v34', 'u7', 'o4', 's14', 'c18', 'u9.18', 'a6.819999999999999', 'l3.0', 'l1', 't7.0', 'cv-0.3')
+('c4', 'b8', 'p1', 'v41', 'u6', 'o1', 's10', 'c20', 'u8.18', 'a8.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c4', 'b8', 'p2', 'v42', 'u6', 'o2', 's12', 'c20', 'u8.18', 'a8.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c4', 'b8', 'p3', 'v43', 'u6', 'o3', 's4', 'c21', 'u8.18', 'a9.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c4', 'b8', 'p4', 'v44', 'u6', 'o4', 's8', 'c21', 'u12.18', 'a5.819999999999999', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c5', 'b8', 'p1', 'v51', 'u5', 'o1', 's7', 'c23', 'u11.18', 'a8.82', 'l3.0', 'l1', 't5.0', 'cv-0.3')
+('c5', 'b8', 'p2', 'v52', 'u5', 'o2', 's13', 'c25', 'u11.18', 'a10.82', 'l3.0', 'l1', 't5.0', 'cv-0.3')
+('c5', 'b8', 'p3', 'v53', 'u5', 'o3', 's6', 'c25', 'u11.18', 'a10.82', 'l3.0', 'l1', 't5.0', 'cv-0.3')
+('c5', 'b8', 'p4', 'v54', 'u5', 'o4', 's5', 'c26', 'u10.18', 'a12.82', 'l3.0', 'l1', 't5.0', 'cv-0.3')
+('c6', 'b8', 'p1', 'v61', 'u6', 'o1', 's11', 'c27', 'u11.18', 'a12.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c6', 'b8', 'p2', 'v62', 'u6', 'o2', 's15', 'c29', 'u11.18', 'a14.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c6', 'b8', 'p3', 'v63', 'u6', 'o3', 's2', 'c29', 'u11.18', 'a14.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c6', 'b8', 'p4', 'v64', 'u6', 'o4', 's1', 'c30', 'u12.18', 'a14.82', 'l3.0', 'l1', 't6.0', 'cv-0.3')
+('c7', 'b8', 'p1', 'v71', 'u4', 'o1', 's3', 'c31', 'u10.18', 'a17.82', 'l3.0', 'l1', 't4.0', 'cv-0.3')
+('c7', 'b8', 'p2', 'v72', 'u4', 'o2', 's9', 'c31', 'u10.18', 'a17.82', 'l3.0', 'l1', 't4.0', 'cv-0.3')
+('c7', 'b8', 'p3', 'v73', 'u4', 'o3', 's14', 'c18', 'u13.02', 'a2.9799999999999995', 'l4.0', 'l1', 't4.0', 'cv-0.16')
+('c7', 'b8', 'p4', 'v74', 'u4', 'o4', 's10', 'c20', 'u12.02', 'a4.98', 'l4.0', 'l1', 't4.0', 'cv-0.16')
+('c8', 'b4', 'p1', 'v81', 'u6', 'o1', 's12', 'c20', 'u14.02', 'a2.9800000000000004', 'l4.0', 'l1', 't6.0', 'cv-0.16')
+('c8', 'b4', 'p2', 'v82', 'u6', 'o2', 's4', 'c21', 'u14.02', 'a3.9800000000000004', 'l4.0', 'l1', 't6.0', 'cv-0.16')
+('c8', 'b4', 'p3', 'v83', 'u6', 'o3', 's', 'c', 'u', 'a', 'l', 'l2', 't12.0', 'cv9999')
+('c8', 'b4', 'p3', 'v84', 'u6', 'o4', 's1', 'c30', 'u24.25', 'a2.75', 'l5.0', 'l2', 't12.0', 'cv0.07')
+('c9', 'b8', 'p1', 'v91', 'u2', 'o1', 's8', 'c21', 'u14.02', 'a3.9799999999999995', 'l4.0', 'l1', 't2.0', 'cv-0.16')
+('c9', 'b8', 'p2', 'v92', 'u2', 'o2', 's7', 'c23', 'u13.02', 'a6.98', 'l4.0', 'l1', 't2.0', 'cv-0.16')
+('c9', 'b8', 'p3', 'v93', 'u2', 'o3', 's13', 'c25', 'u13.02', 'a8.98', 'l4.0', 'l1', 't2.0', 'cv-0.16')
+('c9', 'b8', 'p4', 'v94', 'u2', 'o4', 's6', 'c25', 'u13.02', 'a8.98', 'l4.0', 'l1', 't2.0', 'cv-0.16')
