@@ -50,6 +50,13 @@ Requirements
 1. Python 3
 2. Library: random and math
 
+
+Appendix: 
+1) The simulator is writen by Anh Phan Nguyen. Source code could be found here;
+https://github.com/phananh1010/csc8820-vnf-simulator/
+2) The Switching Cost function is writen by Xiang Li that is included into placement program.
+
+
 Example:
 
 runfile('C:/project_gls_placement.py')
