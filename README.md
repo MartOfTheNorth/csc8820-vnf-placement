@@ -4,8 +4,10 @@ csc8820-vnf-placement
 Introduction
 
 
-Virtual Network Function (VNF) chain is a chain of different network functions (NF). Each network function is an application level service such as Firewall, Intrusion Detection System, Encoder, etc, .... Data packets may flow through these services in an established order. A specific order of these network functions/services is called a service chain. Virtualization technique allows the service chain to be deployed into the cloud in a flexible way that can satisfy different objectives such as minimizing deployment cost, or maximizing the service performance.
+{abstract}
+Network Function Virtualization (NFV) is a novel paradigm that enables flexible and scalable implementation of network services on cloud infrastructure.  A key factor in the success of NFV is the ability to dynamically allocate physical resources according to the demand. An important enabler for the NFV paradigm is software switching, which should satisfy rigid network requirements such as high throughput and low latency. For a certain deployment method on server, we also want a small network delay between virtual functions to make the system have a better performance. This is particularly important when dealing with the data plane since additional resources are required in order to support the virtual switching of the packets between the Virtual Network Functions (VNFs). The exact amount of these resources depends on the way service chains are deployed and the amount of network traffic being handled.
 
+Thus, in our project we try to propose a algorithm to find a optimal deployment method to make the system have minimum network delay. We use virtual-box as the experiment framework to do simulations to get the comparing results between our algorithms and other popular algorithms. The experiment results shows that the algorithm we proposed has low delay which significantly outperform the distributed baseline while having better acceptance rate than gathering baseline. Our algorithm also saved more bandwidth than distributed baseline and have similar performance to the gathering algorithm. 
 
 Given: 
 
@@ -14,26 +16,39 @@ b) Sequence of service chains ɸ
 
 
 
-Goal: 
+Goal : Find a deployment strategy such that end-to-end delay is minimized​
 
-Minimized the switching CPU cost.
-Per each service chain in the sequence, find partition of chain called sub-chain
-Allocate each sub-chain on server in a way to minimized the total switch cost.
+Approach: Sort server by the available CPU. Then assigns the longest sub-chains to servers with smallest/largest available CPUs.​
+
+Algorithm: ​
+
+1) Find the longest sub-chain of chain and put into one server.​
+
+2A) Server with lowest available CPU. (for reserving high-available-cpu server)​
+
+2B) Server with highest available CPU. (More chance to put in server)​
+
+3) Repeat with the next longest sub-chain.  
+
 
 
 Methodology
 
-OPTIMIZED OPERATIONAL COST PLACEMENT
+OPTIMIZED OPERATIONAL COST PLACEMENT (State of Art)
 Goes over all partitions of service chain, grouping subsets of VNFs. For each partition in set, use the switching cost model to find the cost placement on each server. Then find an optimal placement of this partition by finding the maximal matching between sub-chains and servers.
 
+Previous proposed algorithm (OPTIMIZED OPERATIONAL COST PLACEMENT) still have high complexity. Note that this is the complexity of assigning just one service chain. In practice, there could be many more service chains and servers. In addition, the number of ways to break service chain into sub-chains matching with the number of server have exponential complexity.
 
+Thus, in stead of focusing on CPU switching cost for every possible sub-chain like in \cite{optmchain2018}, we propose the Greedy Longest Sub-Chain algorithm that use greedy approach to attempt assign the longest sub-chain in one server as much as possible. The algorithm can be described as following:
 
 Run 
 
 $python3  project_gls_placement.py
 $python3  project_ocm_placement.py
 
-
+Requirements
+1. Python 3
+2. Library: random and math
 
 Example:
 
